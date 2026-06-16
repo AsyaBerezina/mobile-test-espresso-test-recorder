@@ -11,7 +11,6 @@ import static androidx.test.espresso.matcher.ViewMatchers.withParent;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 
-import android.os.SystemClock;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
@@ -39,8 +38,6 @@ public class MainActivityTest {
 
     @Test
     public void mainActivityTest() {
-        SystemClock.sleep(1500); // Wait for the app to be fully initialized
-
         ViewInteraction tabView = onView(
                 allOf(withContentDescription("Tab 2"),
                         childAtPosition(
